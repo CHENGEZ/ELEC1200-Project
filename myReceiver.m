@@ -90,8 +90,9 @@ end
 
 %%%
 %decoded_bitseq = decoded_bitseq(1:16);
-for j = 1:length(decoded_bitseq)
-    if decoded_bitseq(j)==1 && decoded_bitseq(j+1)==1 &&decoded_bitseq(j+2)==1 &&decoded_bitseq(j+3)==1 &&decoded_bitseq(j+4)==1 && decoded_bitseq(j+5)==1 &&decoded_bitseq(j+6)==1 && decoded_bitseq(j+7)==1 &&decoded_bitseq(j+8)==1 && decoded_bitseq(j+9)==1
+for j = 1:length(decoded_bitseq)-29
+    metEndCheck;
+    if arrivedStop
         break;
     end
 end

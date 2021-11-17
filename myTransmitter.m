@@ -4,7 +4,7 @@ SPB = 20;
 % define step-like waveform to send over channel
 training_bitseq = [zeros(1,20),ones(1,40)];
 msg_bit = text2bitseq(txMsg);
-stop_bit_seq = [ones(1,20)];
+stop_bit_seq = [ones(1,10),zeros(1,10),ones(1,10)];
 tx_bit = [training_bitseq,msg_bit,stop_bit_seq];
 tx_wave = bitseq2waveform(tx_bit,SPB);
 rx_wave=txrx(tx_wave);
